@@ -18,7 +18,6 @@ public class UserController implements UserResource {
     private final UserMapper userMapper;
 
     @Override
-    @Logger(UserController.class)
     public UserDTO create(UserDTO user) {
         return Optional.of(user)
                 .map(userMapper::fromDto)
