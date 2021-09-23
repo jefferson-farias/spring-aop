@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-class UserServiceImpl implements UserService {
+class UserServiceImpl implements UserService { // equivalente ao caso de uso, controla somente regra de fluxo de execução
 
     private final UserRepository userRepository;
 

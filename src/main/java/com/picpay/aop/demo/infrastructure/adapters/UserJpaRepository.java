@@ -14,12 +14,7 @@ public interface UserJpaRepository extends UserRepository, JpaRepository<User, L
     }
 
     @Override
-//    @SuppressException
     default User getById(Long id) {
-//        if (1 == 1) {
-//            throw new RuntimeException("errorrrrrr");
-//        }
-
         return findById(id).orElse(null);
     }
 }
