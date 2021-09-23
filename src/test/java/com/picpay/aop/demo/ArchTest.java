@@ -43,7 +43,7 @@ public class ArchTest {
                 .andShould()
                 .dependOnClassesThat()
                 .resideOutsideOfPackage("com.picpay.aop.demo.domain.services")
-                .as("Services shouldn't depend other services");
+                .as("Services shouldn't depend other services and not be public");
 
         rule.check(serviceClasses);
     }
