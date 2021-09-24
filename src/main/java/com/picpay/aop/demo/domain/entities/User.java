@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 @Entity(name = "user")
 public class User { // Entidade é responsável por manter seu estado sempre consistente.
 
-    private static final Pattern DOMAIN_PICPAY = Pattern.compile("@picpay");
+    private static final String DOMAIN_PICPAY = "@picpay.com";
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -35,7 +35,7 @@ public class User { // Entidade é responsável por manter seu estado sempre con
     }
 
     private void validateEmailPicpay() {
-        var isDomainPicpay = email.matches(DOMAIN_PICPAY.pattern());
+        var isDomainPicpay = email.endsWith(DOMAIN_PICPAY);
 
         Assert.assertTrue(isDomainPicpay, "Invalid email!");
     }
