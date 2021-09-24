@@ -5,11 +5,11 @@ import com.picpay.aop.demo.domain.ports.driven.UserRecipient;
 import com.picpay.aop.demo.domain.ports.driven.UserRepository;
 import com.picpay.aop.demo.domain.ports.driver.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 
-@Service
 @RequiredArgsConstructor
-class UserServiceImpl implements UserService { // equivalente ao caso de uso, controla somente regra de fluxo de execução
+//@Service
+//class UserServiceImpl implements UserService {
+public class UserServiceImpl implements UserService { // equivalente ao caso de uso, controla somente regra de fluxo de execução
 
     private final UserRepository userRepository;
     private final UserRecipient userRecipient;
