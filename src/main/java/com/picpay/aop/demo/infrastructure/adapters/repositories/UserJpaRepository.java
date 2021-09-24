@@ -1,4 +1,4 @@
-package com.picpay.aop.demo.infrastructure.adapters;
+package com.picpay.aop.demo.infrastructure.adapters.repositories;
 
 import com.picpay.aop.demo.domain.entities.User;
 import com.picpay.aop.demo.domain.ports.driven.UserRepository;
