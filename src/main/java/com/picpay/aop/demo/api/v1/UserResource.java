@@ -7,11 +7,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.validation.Valid;
+
 @RequestMapping("/users")
 public interface UserResource {
 
     @PostMapping
-    UserDTO create(@RequestBody UserDTO user);
+    UserDTO create(@Valid @RequestBody UserDTO user);
 
     @GetMapping("{id}")
     UserDTO getById(@PathVariable Long id);
